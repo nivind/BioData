@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import HydrationFix from "../HydrationFix";
 
 import MarriageBiodataDesign4 from "../Designs/MarriageBiodataDesign4";
+import ActionButton from "../ActionButton";
 
 export default function BiodataPage() {
   const page1Ref = useRef<HTMLDivElement | null>(null);
@@ -28,7 +29,7 @@ export default function BiodataPage() {
       // Helper: Capture ref and add as PDF page
       const addPageFromRef = async (
         ref: React.RefObject<HTMLDivElement | null>,
-        pageNum: number
+        pageNum: number,
       ) => {
         if (!ref.current) return;
 
@@ -67,30 +68,51 @@ export default function BiodataPage() {
     }
   };
 
+  // Shared button variants
+  const buttonVariants = {
+    rest: { scale: 1, y: 0 },
+    hover: { scale: 1.06, y: -3, transition: { duration: 0.2 } },
+    tap: { scale: 0.97, y: 1 },
+  };
+
+  const iconVariants = {
+    rest: { rotate: 0, scale: 1 },
+    hover: { rotate: 8, scale: 1.15, transition: { duration: 0.4 } },
+  };
+
   return (
     <div className="relative min-h-screen w-full">
       <HydrationFix />
 
-      {/* Top Toolbar */}
-
-      <div className="p-2 sm:p-4 flex w-full flex-wrap sm:flex-row  gap-3 sm:gap-4  bg-gray-300 dark:bg-gray-800">
-        <button
+      {/* Top Toolbar – improved version */}
+      <div
+        className="
+          sticky top-0 z-50
+          flex flex-wrap items-center justify-center sm:justify-start
+          gap-3 p-4 
+          bg-gray-100/80 dark:bg-gray-900/80 
+          backdrop-blur-md border-b border-gray-200 dark:border-gray-800
+        "
+      >
+        <ActionButton
           onClick={generatePDF}
-          className="cursor-pointer flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
-        >
-          Download Biodata
-          <DownloadIcon className="w-4 h-4" />
-        </button>
+          icon={<DownloadIcon className="w-5 h-5" />}
+          label="Bio"
+          tooltip="Save as beautiful PDF file"
+          color="green"
+        />
 
-        <button
+        <ActionButton
           onClick={() => router.push("/photos")}
-          className="cursor-pointer flex items-center gap-2 px-6 py-3  bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium"
-        >
-          Photos
-          <Images className="w-4 h-4" />
-        </button>
+          icon={<Images className="w-5 h-5" />}
+          label="View Photos"
+          tooltip="Upload or see profile pictures"
+          color="blue"
+        />
 
-        <ThemeSwitcher />
+        <div className="ml-auto">
+          <ThemeSwitcher />
+        </div>
       </div>
 
       {/* Visible Preview */}

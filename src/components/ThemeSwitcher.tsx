@@ -19,7 +19,7 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="ml-auto w-11 h-11 cursor-pointer p-3 rounded-full bg-gray-200 dark:bg-gray-950 text-gray-800 dark:text-gray-200 shadow-lg "
+      className="ml-auto w-11 h-11 cursor-pointer p-3 rounded-full bg-gray-400 dark:bg-gray-600 text-gray-800 dark:text-gray-200 shadow-lg "
       aria-label="Toggle dark/light mode"
     >
       {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}

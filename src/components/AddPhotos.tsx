@@ -1,15 +1,15 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { FileUser } from "lucide-react";
+import ThemeSwitcher from "./ThemeSwitcher";
 
-// Import your animations (adjust path as needed)
+// Assuming these are defined in ./Designs/MarriageBiodataDesign4
 import {
   breathingAnimation,
   smoothFadeLeft,
 } from "./Designs/MarriageBiodataDesign4";
-import ThemeSwitcher from "./ThemeSwitcher";
-import { useRouter } from "next/navigation";
-import { FileUser } from "lucide-react";
 
 // ─── Shared Variants ─────────────────────────────────────────────────────────
 const containerVariants: Variants = {
@@ -23,7 +23,7 @@ const containerVariants: Variants = {
   },
 };
 
-// ─── Reusable Photo Card ─────────────────────────────────────────────────────
+// ─── Improved Photo Card with better lazy + animation trigger ────────────────
 interface PhotoCardProps {
   src: string;
   alt: string;
@@ -42,20 +42,29 @@ function PhotoCard({
   return (
     <motion.div
       className={`flex flex-col items-center ${className}`}
+      // We trigger animation ~100–150px BEFORE the card enters viewport
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{
+        once: true,
+        amount: 0.2, // % of element visible to trigger
+        margin: "-80px", // start earlier → image has time to load
+      }}
       variants={smoothFadeLeft}
     >
       <motion.div
         className={`${widthClass} ${heightClass} rounded-3xl overflow-hidden border-8 border-teal-600/50 dark:border-teal-500/60 shadow-2xl`}
+        // Breathing still runs once visible
         animate={breathingAnimation}
       >
         <img
           src={src}
           alt={alt}
           className="w-full h-full object-cover"
-          loading="lazy"
+          loading="lazy" // ← native browser lazy loading
+          decoding="async" // helps with perceived performance
+          // Optional: add fetchpriority="low" on non-hero images
+          // fetchPriority="low"
         />
       </motion.div>
     </motion.div>
@@ -65,56 +74,57 @@ function PhotoCard({
 // ─── Main Component ──────────────────────────────────────────────────────────
 export default function AddPhotos() {
   const router = useRouter();
+
   const photos: PhotoCardProps[] = [
     {
       src: "./profile/Profile2.jpeg",
       alt: "Groom Profile 1",
-      heightClass: "h-100 ",
+      heightClass: "h-100",
     },
     {
       src: "./profile/Profile3.jpeg",
       alt: "Groom Profile 2",
-      heightClass: "h-110 ",
+      heightClass: "h-110",
     },
     {
       src: "./profile/Profile4.jpeg",
       alt: "Groom Profile 3",
-      heightClass: "h-100 ",
+      heightClass: "h-100",
     },
     {
       src: "./profile/Profile5.jpeg",
       alt: "Groom Profile 4",
-      heightClass: "h-120 ",
+      heightClass: "h-120",
     },
     {
       src: "./profile/Profile6.jpeg",
       alt: "Groom Profile 5",
-      heightClass: "h-110 ",
+      heightClass: "h-110",
     },
     {
       src: "./profile/Profile7.jpeg",
       alt: "Groom Profile 6",
-      heightClass: "h-110 ",
+      heightClass: "h-110",
     },
     {
       src: "./profile/Profile1.jpeg",
       alt: "Groom Profile 7",
-      heightClass: "h-100 ",
+      heightClass: "h-100",
     },
     {
       src: "./profile/Profile8.jpeg",
       alt: "Groom Profile 8",
-      heightClass: "h-100 ",
+      heightClass: "h-100",
     },
   ];
 
   return (
     <>
       {/* Top Toolbar */}
-      <div className="p-2 sm:p-4 flex w-full flex-wrap sm:flex-row  gap-3 sm:gap-4  bg-gray-300 dark:bg-gray-800">
+      <div className="p-4 sm:p-4 flex w-full flex-wrap sm:flex-row gap-3 sm:gap-4 bg-gray-300 dark:bg-gray-800">
         <button
           onClick={() => router.push("/")}
-          className="cursor-pointer flex items-center gap-2 px-6 py-3  bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium"
+          className="cursor-pointer flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium"
         >
           Biodata
           <FileUser className="w-4 h-4" />
@@ -122,9 +132,10 @@ export default function AddPhotos() {
 
         <ThemeSwitcher />
       </div>
+
       <div className="min-h-screen bg-linear-to-br from-gray-50 to-teal-50/30 dark:from-gray-950 dark:to-teal-950/20 py-8 px-6">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto w-full "
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto w-full max-w-7xl"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
