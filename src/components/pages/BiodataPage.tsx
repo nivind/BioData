@@ -62,7 +62,7 @@ export default function BiodataPage() {
       // Page 1
       await addPageFromRef(page1Ref, 1);
 
-      pdf.save("Marriage_Biodata.pdf");
+      pdf.save("Nivin_Biodata.pdf");
     } catch (error) {
       console.error("PDF generation failed:", error);
     }
