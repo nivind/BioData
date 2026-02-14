@@ -65,7 +65,7 @@ const MarriageBiodataDesign4: React.FC = () => {
         id="biodata-content"
         className="min-h-screen bg-linear-to-br from-teal-50 via-cyan-50 to-teal-100 
                    dark:from-teal-950 dark:via-cyan-950 dark:to-teal-950
-                   text-gray-900 dark:text-gray-100 overflow-x-hidden"
+                   text-gray-900 dark:text-gray-100 overflow-x-hidden rounded-lg"
         style={{
           fontFamily: "Arial, Helvetica, sans-serif",
           boxSizing: "border-box",
