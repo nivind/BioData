@@ -21,7 +21,7 @@ function ActionButton({
   const [showTooltip, setShowTooltip] = useState(false);
 
   const baseClasses = `
-    relative flex items-center gap-2 px-4 py-3
+    relative flex items-center gap-2 px-4 py-3 cursor-pointer
     text-white font-medium rounded-xl shadow-md
     transition-shadow duration-200
     hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2
