@@ -118,7 +118,7 @@ export default function BiodataPage() {
       {/* Visible Preview */}
       <div
         id="main-content"
-        className="overflow-y-auto h-[calc(100vh-80px)] p-4"
+        className="overflow-y-auto h-[calc(100vh-80px)] p-4 pb-20"
       >
         {/* <MarriageBiodata /> */}
         {/* <MarriageBiodataDesign1 /> */}
