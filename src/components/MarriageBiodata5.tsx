@@ -156,7 +156,7 @@ const MarriageBiodata5: React.FC = () => {
             </div>
           </section>
 
-          <section className="mt-auto">
+          {/* <section className="mt-auto">
             <h2 className="text-xl font-bold text-indigo-900 mb-3 border-b border-indigo-200 pb-1">
               PARTNER PREFERENCE
             </h2>
@@ -169,7 +169,7 @@ const MarriageBiodata5: React.FC = () => {
                 and joyful in her journey
               </li>
             </ul>
-          </section>
+          </section> */}
         </div>
       </div>
     </div>

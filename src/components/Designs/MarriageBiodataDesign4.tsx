@@ -304,7 +304,7 @@ const MarriageBiodataDesign4: React.FC = () => {
             </motion.section>
 
             {/* PARTNER PREFERENCE */}
-            <motion.section
+            {/* <motion.section
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -323,7 +323,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                   hardworking, and joyful in her journey.
                 </li>
               </ul>
-            </motion.section>
+            </motion.section> */}
           </div>
         </div>
       </div>
