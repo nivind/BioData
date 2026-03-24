@@ -120,9 +120,9 @@ const MarriageBiodata5: React.FC = () => {
               <p>
                 <strong>Company:</strong> Setty Mech Engineers Pvt. Ltd., Mysore
               </p>
-              <p>
+              {/* <p>
                 <strong>Monthly Income:</strong> 55K+
-              </p>
+              </p> */}
             </div>
           </section>
 

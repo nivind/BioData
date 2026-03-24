@@ -1,5 +1,4 @@
-// Design 4.2 - Left Side Big Photo + Clean Right Content (Teal Theme)
-// With subtle continuous breathing effect on profile photo
+// src/components/MarriageBiodataDesign4.tsx
 import React from "react";
 import { motion, useScroll, useSpring, Variants } from "framer-motion";
 
@@ -10,14 +9,11 @@ export const smoothFadeLeft = {
     opacity: 1,
     x: 0,
     scale: 1,
-    transition: {
-      duration: 1.1,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
+    transition: { duration: 1.1, ease: [0.25, 0.1, 0.25, 1] },
   },
 } as const satisfies Variants;
 
-// 2. Right side entrance animation (with custom delay)
+// 2. Right side entrance animation
 export const smoothFadeRight = {
   hidden: { opacity: 0, x: 80, scale: 0.96 },
   visible: (customDelay: number) => ({
@@ -32,7 +28,7 @@ export const smoothFadeRight = {
   }),
 } as const satisfies Variants;
 
-// 3. Breathing / pulsing animation (more elastic feel)
+// 3. Breathing animation
 export const breathingAnimation = {
   scale: 1.06,
   transition: {
@@ -40,12 +36,11 @@ export const breathingAnimation = {
     ease: [0.4, 0, 0.6, 1],
     repeat: Infinity,
     repeatType: "reverse",
-    from: 1, // ← explicit starting point
+    from: 1,
   },
 } as const;
 
 const MarriageBiodataDesign4: React.FC = () => {
-  // Optional: Scroll Progress Bar (you can remove if not needed)
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -55,24 +50,22 @@ const MarriageBiodataDesign4: React.FC = () => {
 
   return (
     <>
-      {/* Scroll Progress Bar - optional but premium touch */}
+      {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1.5 bg-linear-to-r from-teal-500 via-cyan-400 to-teal-600 origin-left z-50 shadow-lg shadow-teal-500/30"
+        className="fixed top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-500 via-cyan-400 to-teal-600 origin-left z-50 shadow-lg shadow-teal-500/30"
         style={{ scaleX }}
       />
 
       <div
         id="biodata-content"
-        className="min-h-screen bg-linear-to-br from-teal-50 via-cyan-50 to-teal-100 
-                   dark:from-teal-950 dark:via-cyan-950 dark:to-teal-950
-                   text-gray-900 dark:text-gray-100 overflow-x-hidden rounded-lg"
+        className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 dark:from-teal-950 dark:via-cyan-950 dark:to-teal-950 text-gray-900 dark:text-gray-100 overflow-x-hidden rounded-lg"
         style={{
           fontFamily: "Arial, Helvetica, sans-serif",
           boxSizing: "border-box",
         }}
       >
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 p-6 md:p-10 lg:p-16">
-          {/* Left Column - Photo & Title */}
+          {/* Left Column */}
           <motion.div
             className="lg:w-5/12 flex flex-col items-center lg:items-start lg:sticky lg:top-10 lg:self-start"
             initial="hidden"
@@ -81,9 +74,7 @@ const MarriageBiodataDesign4: React.FC = () => {
             variants={smoothFadeLeft}
           >
             <motion.div
-              className="w-64 h-80 lg:w-70 lg:h-85.5 rounded-3xl overflow-hidden 
-                         border-8 border-teal-600/50 dark:border-teal-500/60 
-                         shadow-2xl"
+              className="w-64 h-80 lg:w-72 lg:h-[22rem] rounded-3xl overflow-hidden border-8 border-teal-600/50 dark:border-teal-500/60 shadow-2xl"
               animate={breathingAnimation}
             >
               <img
@@ -93,16 +84,12 @@ const MarriageBiodataDesign4: React.FC = () => {
               />
             </motion.div>
 
-            <h1
-              className="mt-10 text-4xl lg:text-5xl whitespace-nowrap font-bold text-blue-800 dark:text-blue-500 
-                         text-center leading-tight tracking-wide"
-            >
+            <h1 className="mt-10 text-4xl lg:text-5xl whitespace-nowrap font-bold text-blue-800 dark:text-blue-500 text-center leading-tight tracking-wide">
               Marriage Biodata
-              {/* <br /> */}
             </h1>
           </motion.div>
 
-          {/* Right Column - Content Sections */}
+          {/* Right Column */}
           <div className="lg:w-7/12 space-y-14 lg:space-y-20 pt-4 md:pt-0">
             {/* PERSONAL DETAILS */}
             <motion.section
@@ -131,11 +118,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 <div>
                   <span className="font-semibold">Weight:</span> 77 kg
                 </div>
-                {/* <div>
-                  <span className="font-semibold">Marital Status:</span>{" "}
-                  Unmarried
-                </div> */}
-                <div className="">
+                <div>
                   <span className="font-semibold">Religion:</span> Christian
                   (Pentecostal)
                 </div>
@@ -169,9 +152,9 @@ const MarriageBiodataDesign4: React.FC = () => {
                   <span className="font-semibold">Company:</span> Setty Mech
                   Engineers Pvt. Ltd., Mysore
                 </p>
-                <p>
+                {/* <p>
                   <span className="font-semibold">Monthly Income:</span> 55K+
-                </p>
+                </p> */}
               </div>
             </motion.section>
 
@@ -210,11 +193,11 @@ const MarriageBiodataDesign4: React.FC = () => {
               </h2>
               <div className="space-y-3 leading-relaxed flex flex-col">
                 <div className="flex flex-col md:flex-row md:gap-8">
-                  <div className="">
+                  <div>
                     <span className="font-semibold">Father:</span>&nbsp; Deva
                     Arul (Farmer)
                   </div>
-                  <div className="ml-3.5">
+                  <div className="md:ml-0 ml-3.5">
                     <span className="font-semibold">Mob:</span>&nbsp; +91
                     8970500425
                   </div>
@@ -224,7 +207,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                   (Home Maker)
                 </div>
                 <div>
-                  <span className="font-semibold">Siblings:</span> &nbsp;One
+                  <span className="font-semibold">Siblings:</span>&nbsp; One
                   Younger Brother
                 </div>
                 <div>
@@ -284,7 +267,7 @@ const MarriageBiodataDesign4: React.FC = () => {
               </ul>
             </motion.section>
 
-            {/* HOBBIES & INTERESTS */}
+            {/* HOBBIES */}
             <motion.section
               initial="hidden"
               whileInView="visible"
@@ -302,28 +285,6 @@ const MarriageBiodataDesign4: React.FC = () => {
                 <li>Spending quality time with family and church fellowship</li>
               </ul>
             </motion.section>
-
-            {/* PARTNER PREFERENCE */}
-            {/* <motion.section
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              custom={1.2}
-              variants={smoothFadeRight}
-            >
-              <h2 className="text-2xl font-bold text-teal-800 dark:text-teal-300 mb-5 border-l-4 border-teal-600 pl-4">
-                PARTNER PREFERENCE
-              </h2>
-              <ul className="list-disc pl-6 space-y-2.5 text-gray-800 dark:text-gray-300 leading-relaxed">
-                <li>Born-again Christian</li>
-                <li>God-fearing, prayerful, values family life</li>
-                <li>Health & Well-being (Wellness)</li>
-                <li>
-                  Passionate about her dreams or career; goal-driven,
-                  hardworking, and joyful in her journey.
-                </li>
-              </ul>
-            </motion.section> */}
           </div>
         </div>
       </div>
