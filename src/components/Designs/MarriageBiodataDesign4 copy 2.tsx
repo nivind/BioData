@@ -137,7 +137,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 Engineers Pvt. Ltd., Mysore
               </p>
               <p>
-                <span className="font-semibold">Monthly Income:</span> 55K+
+                <span className="font-semibold">Monthly Income:</span> ₹60,000+
               </p>
             </div>
           </motion.section>

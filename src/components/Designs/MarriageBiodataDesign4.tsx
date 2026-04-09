@@ -152,9 +152,10 @@ const MarriageBiodataDesign4: React.FC = () => {
                   <span className="font-semibold">Company:</span> Setty Mech
                   Engineers Pvt. Ltd., Mysore
                 </p>
-                {/* <p>
-                  <span className="font-semibold">Monthly Income:</span> 55K+
-                </p> */}
+                <p>
+                  <span className="font-semibold">Monthly Income:</span>{" "}
+                  ₹60,000+
+                </p>
               </div>
             </motion.section>
 

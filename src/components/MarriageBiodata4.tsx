@@ -79,7 +79,7 @@ const MarriageBiodata4: React.FC = () => {
                   Mysore
                 </p>
                 <p>
-                  <strong>Monthly Income:</strong> 55K+
+                  <strong>Monthly Income:</strong> ₹60,000+
                 </p>
               </div>
             </section>

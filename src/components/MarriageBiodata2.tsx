@@ -63,7 +63,7 @@ const MarriageBiodata2: React.FC = () => {
                 <b>Company:</b> Setty Mech Engineers Pvt. Ltd., Mysore
               </p>
               <p>
-                <b>Monthly Income:</b> 55K+
+                <b>Monthly Income:</b> ₹60,000+
               </p>
             </>
           ),
