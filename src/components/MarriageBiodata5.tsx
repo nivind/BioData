@@ -1,4 +1,5 @@
 // src/components/MarriageBiodata5.tsx
+"use client";
 import React from "react";
 
 const MarriageBiodata5: React.FC = () => {
