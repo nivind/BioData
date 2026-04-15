@@ -57,14 +57,14 @@ const MarriageBiodata2: React.FC = () => {
           content: (
             <>
               <p>
-                <b>Profession:</b> Software Engineer
+                <b>Profession:</b> Senior Software Engineer
               </p>
               <p>
                 <b>Company:</b> Setty Mech Engineers Pvt. Ltd., Mysore
               </p>
-              <p>
+              {/* <p>
                 <b>Monthly Income:</b> ₹60,000+
-              </p>
+              </p> */}
             </>
           ),
         },

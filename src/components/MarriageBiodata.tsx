@@ -70,16 +70,16 @@ const MarriageBiodata: React.FC = () => {
           </h2>
           <div className="space-y-1.5">
             <p>
-              <span className="font-semibold">Profession:</span> Software
+              <span className="font-semibold">Profession:</span>Senior Software
               Engineer
             </p>
             <p>
               <span className="font-semibold">Company:</span> Setty Mech
               Engineers Pvt. Ltd., Mysore
             </p>
-            <p>
+            {/* <p>
               <span className="font-semibold">Monthly Income:</span> ₹60,000+
-            </p>
+            </p> */}
           </div>
         </section>
 

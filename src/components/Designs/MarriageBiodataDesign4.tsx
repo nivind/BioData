@@ -52,13 +52,13 @@ const MarriageBiodataDesign4: React.FC = () => {
     <>
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-500 via-cyan-400 to-teal-600 origin-left z-50 shadow-lg shadow-teal-500/30"
+        className="fixed top-0 left-0 right-0 h-1.5 bg-linear-to-r from-teal-500 via-cyan-400 to-teal-600 origin-left z-50 shadow-lg shadow-teal-500/30"
         style={{ scaleX }}
       />
 
       <div
         id="biodata-content"
-        className="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 dark:from-teal-950 dark:via-cyan-950 dark:to-teal-950 text-gray-900 dark:text-gray-100 overflow-x-hidden rounded-lg"
+        className="min-h-screen bg-linear-to-br from-teal-50 via-cyan-50 to-teal-100 dark:from-teal-950 dark:via-cyan-950 dark:to-teal-950 text-gray-900 dark:text-gray-100 overflow-x-hidden rounded-lg"
         style={{
           fontFamily: "Arial, Helvetica, sans-serif",
           boxSizing: "border-box",
@@ -74,7 +74,7 @@ const MarriageBiodataDesign4: React.FC = () => {
             variants={smoothFadeLeft}
           >
             <motion.div
-              className="w-64 h-80 lg:w-72 lg:h-[22rem] rounded-3xl overflow-hidden border-8 border-teal-600/50 dark:border-teal-500/60 shadow-2xl"
+              className="w-64 h-80 lg:w-72 lg:h-88 rounded-3xl overflow-hidden border-8 border-teal-600/50 dark:border-teal-500/60 shadow-2xl"
               animate={breathingAnimation}
             >
               <img
@@ -145,17 +145,17 @@ const MarriageBiodataDesign4: React.FC = () => {
               </h2>
               <div className="space-y-3 leading-relaxed">
                 <p>
-                  <span className="font-semibold">Profession:</span> Software
-                  Engineer
+                  <span className="font-semibold">Profession:</span> Senior
+                  Software Engineer
                 </p>
                 <p>
                   <span className="font-semibold">Company:</span> Setty Mech
                   Engineers Pvt. Ltd., Mysore
                 </p>
-                <p>
+                {/* <p>
                   <span className="font-semibold">Monthly Income:</span>{" "}
                   ₹60,000+
-                </p>
+                </p> */}
               </div>
             </motion.section>
 
