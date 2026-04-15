@@ -205,7 +205,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 </div>
                 <div>
                   <span className="font-semibold">Mother:</span>&nbsp; Anitha
-                  (Home Maker)
+                  (Farmer & Home Maker)
                 </div>
                 <div>
                   <span className="font-semibold">Siblings:</span>&nbsp; One

@@ -145,7 +145,7 @@ const MarriageBiodata5: React.FC = () => {
                 <strong>Father Mob:</strong> +91 8970500425
               </p>
               <p>
-                <strong>Mother:</strong> Anitha (Home Maker)
+                <strong>Mother:</strong> Anitha (Farmer & Home Maker)
               </p>
               <p>
                 <strong>Siblings:</strong> One Younger Brother
