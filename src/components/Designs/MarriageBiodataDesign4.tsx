@@ -116,7 +116,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                   <span className="font-semibold">Height:</span> 5’8”
                 </div>
                 <div>
-                  <span className="font-semibold">Weight:</span> 77 kg
+                  <span className="font-semibold">Weight:</span> 75 kg
                 </div>
                 <div>
                   <span className="font-semibold">Religion:</span> Christian

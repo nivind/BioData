@@ -95,7 +95,7 @@ const MarriageBiodata5: React.FC = () => {
                 <strong>Height:</strong> 5’8”
               </div>
               <div>
-                <strong>Weight:</strong> 77 kg
+                <strong>Weight:</strong> 75 kg
               </div>
               {/* <div>
                 <strong>Marital Status:</strong> Unmarried
