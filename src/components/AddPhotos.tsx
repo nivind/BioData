@@ -79,23 +79,23 @@ export default function AddPhotos() {
     {
       src: "./profile/Profile2.jpeg",
       alt: "Groom Profile 1",
-      heightClass: "h-100",
+      heightClass: "h-110",
     },
     {
       src: "./profile/Profile3.jpeg",
       alt: "Groom Profile 2",
       heightClass: "h-110",
     },
-    {
-      src: "./profile/Profile4.jpeg",
-      alt: "Groom Profile 3",
-      heightClass: "h-100",
-    },
-    {
-      src: "./profile/Profile5.jpeg",
-      alt: "Groom Profile 4",
-      heightClass: "h-120",
-    },
+    // {
+    //   src: "./profile/Profile4.jpeg",
+    //   alt: "Groom Profile 3",
+    //   heightClass: "h-100",
+    // },
+    // {
+    //   src: "./profile/Profile5.jpeg",
+    //   alt: "Groom Profile 4",
+    //   heightClass: "h-120",
+    // },
     {
       src: "./profile/Profile6.jpeg",
       alt: "Groom Profile 5",
@@ -106,15 +106,20 @@ export default function AddPhotos() {
       alt: "Groom Profile 6",
       heightClass: "h-110",
     },
-    {
-      src: "./profile/Profile1.jpeg",
-      alt: "Groom Profile 7",
-      heightClass: "h-100",
-    },
+    // {
+    //   src: "./profile/Profile1.jpeg",
+    //   alt: "Groom Profile 7",
+    //   heightClass: "h-100",
+    // },
     {
       src: "./profile/Profile8.jpeg",
       alt: "Groom Profile 8",
-      heightClass: "h-100",
+      heightClass: "h-110",
+    },
+    {
+      src: "./profile/Profile9.jpg",
+      alt: "Groom Profile 9",
+      heightClass: "h-110",
     },
   ];
 
