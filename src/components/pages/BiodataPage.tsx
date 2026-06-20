@@ -80,13 +80,13 @@ export default function BiodataPage() {
 
       {/* Top Toolbar */}
       <div className="sticky top-0 z-50 flex flex-wrap items-center justify-center sm:justify-start gap-3 p-4 bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-        <ActionButton
+        {/* <ActionButton
           onClick={generatePDF}
           icon={<DownloadIcon className="w-5 h-5" />}
           label="Bio"
           tooltip="Save as beautiful PDF file"
           color="green"
-        />
+        /> */}
 
         <ActionButton
           onClick={() => router.push("/photos")}

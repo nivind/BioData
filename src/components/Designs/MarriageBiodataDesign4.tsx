@@ -116,7 +116,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                   <span className="font-semibold">Height:</span> 5’8”
                 </div>
                 <div>
-                  <span className="font-semibold">Weight:</span> 75 kg
+                  <span className="font-semibold">Weight:</span> 76 kg
                 </div>
                 <div>
                   <span className="font-semibold">Religion:</span> Christian
@@ -149,8 +149,8 @@ const MarriageBiodataDesign4: React.FC = () => {
                   Software Engineer
                 </p>
                 <p>
-                  <span className="font-semibold">Company:</span> Setty Mech
-                  Engineers Pvt. Ltd., Mysore
+                  <span className="font-semibold">Company:</span> LIO Discovery
+                  Services Pvt. Ltd., Hyderabad
                 </p>
                 {/* <p>
                   <span className="font-semibold">Monthly Income:</span>{" "}
@@ -236,7 +236,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 </p>
                 <p>
                   <span className="font-semibold">Workplace Church:</span> IPC
-                  Feast of Harvest Church, Mysore
+                  Feast of Harvest Church, Mysore (Previous)
                 </p>
               </div>
             </motion.section>

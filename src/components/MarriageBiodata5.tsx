@@ -30,7 +30,7 @@ const MarriageBiodata5: React.FC = () => {
             </p>
             <p>
               <strong>Workplace Church:</strong> IPC Feast of Harvest Church,
-              Mysore (Regular Attendee)
+              Mysore (Regular Attendee) (Previous)
             </p>
           </div>
         </section>
@@ -95,7 +95,7 @@ const MarriageBiodata5: React.FC = () => {
                 <strong>Height:</strong> 5’8”
               </div>
               <div>
-                <strong>Weight:</strong> 75 kg
+                <strong>Weight:</strong> 76 kg
               </div>
               {/* <div>
                 <strong>Marital Status:</strong> Unmarried
@@ -119,7 +119,8 @@ const MarriageBiodata5: React.FC = () => {
                 <strong>Profession:</strong> Senior Software Engineer
               </p>
               <p>
-                <strong>Company:</strong> Setty Mech Engineers Pvt. Ltd., Mysore
+                <strong>Company:</strong> LIO Discovery Services Pvt. Ltd.,
+                Hyderabad
               </p>
               {/* <p>
                 <strong>Monthly Income:</strong> ₹60,000+
