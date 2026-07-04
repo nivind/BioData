@@ -236,7 +236,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 </p>
                 <p>
                   <span className="font-semibold">Workplace Church:</span> IPC
-                  Feast of Harvest Church, Mysore (Previous)
+                  Feast of Harvest Church, Mysore (Previously)
                 </p>
               </div>
             </motion.section>
@@ -280,7 +280,7 @@ const MarriageBiodataDesign4: React.FC = () => {
                 HOBBIES & INTERESTS
               </h2>
               <ul className="list-disc pl-6 space-y-2.5 text-gray-800 dark:text-gray-300 leading-relaxed">
-                <li>Cycling, Singing, Fitness</li>
+                <li>Cycling, Singing, Playing games</li>
                 <li>Listening to sermons</li>
                 <li>Exploring technology and continuous learning</li>
                 <li>Spending quality time with family and church fellowship</li>
